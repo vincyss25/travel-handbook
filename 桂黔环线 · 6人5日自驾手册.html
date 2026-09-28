@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://ab0c2d4b836635e30.app.workbuddy.host/ -->
+<html lang="zh-CN" data-theme="day"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>桂黔环线 · 6人5日自驾手册</title>
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;%F0%9F%9A%97&lt;/text&gt;&lt;/svg&gt;">
+<style>
+:root{
+  --bg:#f6f1e7; --card:#fffdf7; --ink:#2b2620; --sub:#7a7264; --line:#e5dcc9;
+  --accent:#c2472e; --d1:#d9433c; --d2:#e08a12; --d3:#2f9e44; --d4:#1971c2; --d5:#9c36b5;
+  --bk:#b45309; --bkbg:#fdf3e0; --warn:#a61e4d;
+  --shadow:0 2px 10px rgba(90,70,30,.10);
+}
+html[data-theme="night"]{
+  --bg:#12161d; --card:#1b212b; --ink:#e8e3d8; --sub:#96a0ad; --line:#2b3440;
+  --accent:#e8865f; --bk:#e8b45f; --bkbg:#2b2415;
+  --shadow:0 2px 12px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","HarmonyOS Sans SC","Microsoft YaHei",sans-serif;line-height:1.6;padding-bottom:60px;transition:background .5s,color .5s}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px}
+header{padding:28px 0 6px;text-align:center}
+header h1{font-size:1.55rem;letter-spacing:.06em}
+header .dates{color:var(--sub);font-size:.85rem;margin-top:4px}
+.tz{display:inline-block;font-size:.7rem;border:1px solid var(--line);border-radius:999px;padding:1px 10px;color:var(--sub);margin-top:8px;background:var(--card)}
+h2.sec{font-size:1.05rem;margin:34px 0 14px;display:flex;align-items:center;gap:8px}
+h2.sec::before{content:"";width:5px;height:20px;border-radius:3px;background:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px 20px 14px 22px;box-shadow:var(--shadow);padding:18px}
+/* 此刻关注 */
+#focus{background:linear-gradient(145deg,var(--card),var(--card));text-align:center}
+#focus .fl{color:var(--sub);font-size:.8rem;letter-spacing:.15em}
+#focus .fname{font-size:1.15rem;font-weight:700;margin:6px 0 2px}
+#focus .ftime{color:var(--sub);font-size:.85rem}
+.count{display:flex;justify-content:center;align-items:baseline;gap:4px;margin:14px 0 6px;font-variant-numeric:tabular-nums}
+.count b{font-size:2.6rem;font-weight:800;line-height:1;letter-spacing:.02em;font-feature-settings:"tnum"}
+.count .u{font-size:.85rem;color:var(--sub);margin-right:8px}
+.count .sep{font-size:1.6rem;color:var(--sub);margin:0 2px}
+#focus .note{font-size:.72rem;color:var(--sub)}
+/* 地图 */
+.mapcard{padding:10px}
+.mapcard svg{width:100%;height:auto;display:block}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;padding:6px 10px 10px;font-size:.75rem;color:var(--sub)}
+.legend i{display:inline-block;width:18px;height:4px;border-radius:2px;margin-right:5px;vertical-align:middle}
+/* 预订 */
+.bk-group{margin-bottom:14px}
+.bk-group h3{font-size:.92rem;margin:14px 0 8px;color:var(--sub);letter-spacing:.05em}
+table.res{width:100%;border-collapse:collapse;font-size:.86rem}
+table.res td{padding:9px 6px;border-bottom:1px dashed var(--line);vertical-align:top}
+table.res tr:last-child td{border-bottom:none}
+table.res .t{white-space:nowrap;font-weight:700;font-variant-numeric:tabular-nums}
+.tag{display:inline-block;font-size:.68rem;border-radius:6px;padding:1px 7px;margin-left:6px;vertical-align:1px;background:var(--bkbg);color:var(--bk);border:1px solid currentColor}
+.tag.ok{color:var(--d3);background:rgba(47,158,68,.08)}
+.poi{color:var(--accent);text-decoration:none;border-bottom:1px dashed var(--accent);cursor:pointer}
+.poi::after{content:" ⌖";font-size:.75em}
+.hotel{border-top:1px dashed var(--line);padding:12px 0}
+.hotel:first-of-type{border-top:none}
+.hotel h4{font-size:.95rem}
+.hotel p{font-size:.82rem;color:var(--sub);margin-top:3px}
+.hotel .tel{font-variant-numeric:tabular-nums}
+/* 逐日 */
+details.day{background:var(--card);border:1px solid var(--line);border-radius:16px 20px 14px 22px;box-shadow:var(--shadow);margin-bottom:14px;overflow:hidden}
+details.day summary{list-style:none;cursor:pointer;padding:15px 16px;display:flex;align-items:center;gap:12px}
+details.day summary::-webkit-details-marker{display:none}
+.d-badge{flex:0 0 auto;width:42px;height:42px;border-radius:12px 14px 10px 15px;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;font-size:.95rem;line-height:1.05;background:var(--c,var(--accent))}
+.d-badge small{font-size:.55rem;font-weight:400;opacity:.9}
+.day-h h3{font-size:.98rem}
+.day-h p{font-size:.75rem;color:var(--sub)}
+.chev{margin-left:auto;color:var(--sub);transition:transform .25s}
+details[open] .chev{transform:rotate(180deg)}
+.day-body{padding:0 16px 16px;border-top:1px dashed var(--line)}
+.minimap{width:100%;height:auto;margin:12px 0 4px}
+.multinav{display:inline-block;margin:4px 0 8px;font-size:.8rem;color:#fff;background:var(--c,var(--accent));border-radius:10px 12px 9px 13px;padding:7px 14px;text-decoration:none;font-weight:600}
+ol.tl{list-style:none;margin-top:8px}
+ol.tl>li{display:grid;grid-template-columns:52px 14px 1fr;gap:0 8px;position:relative;padding:2px 0}
+ol.tl>li::before{content:"";position:absolute;left:59px;top:0;bottom:0;width:2px;background:var(--line)}
+ol.tl>li:last-child::before{bottom:auto;height:14px}
+ol.tl .dot{width:10px;height:10px;border-radius:50%;background:var(--c,var(--accent));border:2px solid var(--card);box-shadow:0 0 0 2px var(--c,var(--accent));margin-top:9px;position:relative;z-index:1}
+ol.tl time{font-variant-numeric:tabular-nums;font-weight:700;font-size:.85rem;padding-top:5px;text-align:right;color:var(--ink)}
+.tl-c{padding:2px 0 10px}
+.tl-c .tt{font-size:.92rem;font-weight:600}
+.tl-c .ds{font-size:.8rem;color:var(--sub);margin-top:1px}
+.drive{font-size:.72rem;color:var(--sub);display:flex;align-items:center;gap:5px;margin-top:2px}
+.bk{display:inline-block;font-size:.68rem;border-radius:6px;padding:0 7px;margin-left:6px;background:var(--bkbg);color:var(--bk);border:1px solid currentColor;vertical-align:2px;font-style:normal;font-weight:600}
+.bk.free{color:var(--d3);background:rgba(47,158,68,.08)}
+.bk.on-site{color:var(--d4);background:rgba(25,113,194,.08)}
+.bk.hot{color:var(--warn);background:rgba(166,30,77,.08)}
+.remind{margin:4px 0 10px;padding:10px 12px;border-radius:12px;background:var(--bkbg);color:var(--bk);font-size:.8rem;border:1px dashed currentColor}
+/* 待办 */
+ol.todo{list-style:none;counter-reset:t}
+ol.todo li{counter-increment:t;display:flex;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:.88rem;align-items:flex-start}
+ol.todo li:last-child{border-bottom:none}
+ol.todo li::before{content:counter(t);flex:0 0 24px;height:24px;border-radius:8px 10px 7px 11px;background:var(--bkbg);color:var(--bk);font-weight:700;font-size:.8rem;display:flex;align-items:center;justify-content:center;margin-top:2px}
+ol.todo .when{color:var(--warn);font-weight:700}
+ol.todo p{font-size:.78rem;color:var(--sub);margin-top:2px}
+/* 贴士 */
+ul.tips{list-style:none}
+ul.tips li{padding:9px 0 9px 26px;position:relative;border-bottom:1px dashed var(--line);font-size:.88rem}
+ul.tips li:last-child{border-bottom:none}
+ul.tips li::before{content:"✦";position:absolute;left:4px;color:var(--accent)}
+ul.tips b{font-weight:700}
+footer{text-align:center;color:var(--sub);font-size:.72rem;padding:30px 20px 0;line-height:1.8}
+@media (max-width:420px){.count b{font-size:2.1rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>桂黔环线 · 自驾手册</h1>
+  <div class="dates">6 人 5 日 · 2026.10.1 集结 — 10.7 返程 · 重庆 ⇄ 广西 ⇄ 贵州 · 约 2100km</div>
+  <span class="tz">本页所有时间均为 北京时间 UTC+8 · 无夏令时</span>
+</header>
+
+<!-- ① 此刻关注 -->
+<section class="card" id="focus" style="margin-top:18px">
+  <div class="fl">此刻关注 · NEXT</div>
+  <div class="fname" id="evName">丽丰源可提前入住 · 重庆集结日开始</div>
+  <div class="ftime" id="evTime">10月1日 周四 00:00 · 北京时间</div>
+  <div class="count">
+    <b id="cdD">2</b><span class="u">天</span><span class="sep">:</span>
+    <b id="cdH">16</b><span class="u">时</span><span class="sep">:</span>
+    <b id="cdM">33</b><span class="u">分</span><span class="sep">:</span>
+    <b id="cdS">20</b><span class="u">秒</span>
+  </div>
+  <div class="note">倒计时按北京时间实时计算 · 与你手机所在时区无关 · 每秒刷新</div>
+</section>
+
+<!-- ② 总览地图 -->
+<h2 class="sec">行程总览 · 每日路线与住宿</h2>
+<div class="card mapcard">
+<svg viewBox="0 0 760 580" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="行程手绘地图">
+  <defs>
+    <filter id="wob" x="-10%" y="-10%" width="120%" height="120%">
+      <feturbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" seed="7" result="n"></feturbulence>
+      <fedisplacementmap in="SourceGraphic" in2="n" scale="7"></fedisplacementmap>
+    </filter>
+  </defs>
+  <g filter="url(#wob)" fill="none" stroke-linecap="round" opacity="0.95">
+    <!-- D1 重庆→龙胜→金坑→桂林 红 -->
+    <path d="M85,95 C210,38 420,55 550,105" stroke="#d9433c" stroke-width="8" opacity=".18"></path>
+    <path d="M85,95 C210,38 420,55 550,105" stroke="#d9433c" stroke-width="3.5"></path>
+    <path d="M550,105 C565,95 580,88 595,80" stroke="#d9433c" stroke-width="3.5"></path>
+    <path d="M595,80 C640,98 658,140 650,185" stroke="#d9433c" stroke-width="3.5"></path>
+    <!-- D2 桂林→阳朔 橙 -->
+    <path d="M650,185 C668,245 640,290 600,310" stroke="#e08a12" stroke-width="8" opacity=".18"></path>
+    <path d="M650,185 C668,245 640,290 600,310" stroke="#e08a12" stroke-width="3.5"></path>
+    <!-- D3 阳朔→兴坪→柳州 绿 -->
+    <path d="M600,310 C622,298 634,288 645,275" stroke="#2f9e44" stroke-width="8" opacity=".18"></path>
+    <path d="M600,310 C622,298 634,288 645,275" stroke="#2f9e44" stroke-width="3.5"></path>
+    <path d="M645,275 C610,330 575,358 540,380" stroke="#2f9e44" stroke-width="8" opacity=".18"></path>
+    <path d="M645,275 C610,330 575,358 540,380" stroke="#2f9e44" stroke-width="3.5"></path>
+    <!-- D4 柳州→小七孔→贵阳 蓝 -->
+    <path d="M540,380 C480,432 420,470 365,500" stroke="#1971c2" stroke-width="8" opacity=".18"></path>
+    <path d="M540,380 C480,432 420,470 365,500" stroke="#1971c2" stroke-width="3.5"></path>
+    <path d="M365,500 C300,472 240,420 195,385" stroke="#1971c2" stroke-width="8" opacity=".18"></path>
+    <path d="M365,500 C300,472 240,420 195,385" stroke="#1971c2" stroke-width="3.5"></path>
+    <!-- D5 贵阳→织金洞→遵义→重庆 紫 -->
+    <path d="M195,385 C135,382 92,370 60,355" stroke="#9c36b5" stroke-width="8" opacity=".18"></path>
+    <path d="M195,385 C135,382 92,370 60,355" stroke="#9c36b5" stroke-width="3.5"></path>
+    <path d="M60,355 C78,310 120,265 160,225" stroke="#9c36b5" stroke-width="3.5"></path>
+    <path d="M160,225 C132,180 104,135 85,95" stroke="#9c36b5" stroke-width="3.5"></path>
+  </g>
+  <!-- 城市 / 住宿点（可点击导航） -->
+  <g font-size="13" font-weight="700">
+    <a class="poi" data-to="106.527,29.719,金茂国际生态新城臻悦" href="https://uri.amap.com/navigation?to=106.527%2C29.719%2C%E9%87%91%E8%8C%82%E5%9B%BD%E9%99%85%E7%94%9F%E6%80%81%E6%96%B0%E5%9F%8E%E8%87%BB%E6%82%A6&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener"><circle cx="85" cy="95" r="8" fill="#c2472e"></circle><text x="85" y="75" text-anchor="middle" fill="currentColor" paint-order="stroke" stroke="var(--card)" stroke-width="4">重庆 · 集合🛏10.1</text></a>
+    <a class="poi" data-to="110.010,25.797,龙胜县城" href="https://uri.amap.com/navigation?to=110.010%2C25.797%2C%E9%BE%99%E8%83%9C%E5%8E%BF%E5%9F%8E&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener"><circle cx="550" cy="105" r="5" fill="#d9433c"></circle><text x="530" y="122" text-anchor="middle" fill="currentColor" paint-order="stroke" stroke="var(--card)" stroke-width="4">龙胜</text></a>
+    <a class="poi" data-to="110.100,25.820,龙脊梯田金坑大寨" href="https://uri.amap.com/navigation?to=110.100%2C25.820%2C%E9%BE%99%E8%84%8A%E6%A2%AF%E7%94%B0%E9%87%91%E5%9D%91%E5%A4%A7%E5%AF%A8&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener"><circle cx="595" cy="80" r="5" fill="#d9433c"></circle><text x="592" y="62" text-anchor="middle" fill="currentColor" paint-order="stroke" stroke="var(--card)" stroke-width="4">龙脊·金坑大寨</text></a>
+    <a class="poi" data-to="110.203,25.247,亚朵酒店桂林市政府万达广场店" href="https://uri.amap.com/navigation?to=110.203%2C25.247%2C%E4%BA%9A%E6%9C%B5%E9%85%92%E5%BA%97%E6%A1%82%E6%9E%97%E5%B8%82%E6%94%BF%E5%BA%9C%E4%B8%87%E8%BE%BE%E5%B9%BF%E5%9C%BA%E5%BA%97&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener"><circle cx="650" cy="185" r="8" fill="#d9433c"></circle><text x="650" y="212" text-anchor="middle" fill="currentColor" paint-order="stroke" stroke="var(--card)" stroke-width="4">桂林 🛏10.2</text></a>
+    <a class="poi" data-to="110.445,24.810,阳朔蔚景温德姆酒店遇龙河店" href="https://uri.amap.com/navigation?to=110.445%2C24.810%2C%E9%98%B3%E6%9C%94%E8%94%9A%E6%99%AF%E6%B8%A9%E5%BE%B7%E5%A7%86%E9%85%92%E5%BA%97%E9%81%87%E9%BE%99%E6%B2%B3%E5%BA%97&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener"><circle cx="600" cy="310" r="8" fill="#e08a12"></circle><text x="585" y="335" text-anchor="middle" fill="currentColor" paint-order="stroke" stroke="var(--card)" stroke-width="4">阳朔 🛏10.3</text></a>
+    <a class="poi" data-to="110.668,24.846,兴坪古镇" href="https://uri.amap.com/navigation?to=110.668%2C24.846%2C%E5%85%B4%E5%9D%AA%E5%8F%A4%E9%95%87&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener"><circle cx="645" cy="275" r="4" fill="#2f9e44"></circle><text x="672" y="272" fill="currentColor" paint-order="stroke" stroke="var(--card)" stroke-width="4">兴坪</text></a>
+    <a class="poi" data-to="109.516,24.362,全季酒店柳州柳东体育中心官塘大道店" href="https://uri.amap.com/navigation?to=109.516%2C24.362%2C%E5%85%A8%E5%AD%A3%E9%85%92%E5%BA%97%E6%9F%B3%E5%B7%9E%E6%9F%B3%E4%B8%9C%E4%BD%93%E8%82%B2%E4%B8%AD%E5%BF%83%E5%AE%98%E5%A1%98%E5%A4%A7%E9%81%93%E5%BA%97&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener"><circle cx="540" cy="380" r="8" fill="#2f9e44"></circle><text x="540" y="407" text-anchor="middle" fill="currentColor" paint-order="stroke" stroke="var(--card)" stroke-width="4">柳州 🛏10.4</text></a>
+    <a class="poi" data-to="107.870,25.270,小七孔景区东门" href="https://uri.amap.com/navigation?to=107.870%2C25.270%2C%E5%B0%8F%E4%B8%83%E5%AD%94%E6%99%AF%E5%8C%BA%E4%B8%9C%E9%97%A8&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener"><circle cx="365" cy="500" r="6" fill="#1971c2"></circle><text x="365" y="527" text-anchor="middle" fill="currentColor" paint-order="stroke" stroke="var(--card)" stroke-width="4">小七孔</text></a>
+    <a class="poi" data-to="106.601,26.440,贵阳贵安新区希尔顿花园酒店" href="https://uri.amap.com/navigation?to=106.601%2C26.440%2C%E8%B4%B5%E9%98%B3%E8%B4%B5%E5%AE%89%E6%96%B0%E5%8C%BA%E5%B8%8C%E5%B0%94%E9%A1%BF%E8%8A%B1%E5%9B%AD%E9%85%92%E5%BA%97&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener"><circle cx="195" cy="385" r="8" fill="#1971c2"></circle><text x="212" y="412" text-anchor="middle" fill="currentColor" paint-order="stroke" stroke="var(--card)" stroke-width="4">贵阳·贵安 🛏10.5</text></a>
+    <a class="poi" data-to="105.767,26.815,织金洞景区" href="https://uri.amap.com/navigation?to=105.767%2C26.815%2C%E7%BB%87%E9%87%91%E6%B4%9E%E6%99%AF%E5%8C%BA&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener"><circle cx="60" cy="355" r="6" fill="#9c36b5"></circle><text x="60" y="382" text-anchor="middle" fill="currentColor" paint-order="stroke" stroke="var(--card)" stroke-width="4">织金洞</text></a>
+    <a class="poi" data-to="106.9183,27.6887,遵义会议会址" href="https://uri.amap.com/navigation?to=106.9183%2C27.6887%2C%E9%81%B5%E4%B9%89%E4%BC%9A%E8%AE%AE%E4%BC%9A%E5%9D%80&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener"><circle cx="160" cy="225" r="6" fill="#9c36b5"></circle><text x="160" y="252" text-anchor="middle" fill="currentColor" paint-order="stroke" stroke="var(--card)" stroke-width="4">遵义</text></a>
+  </g>
+</svg>
+<div class="legend">
+  <span><i style="background:#d9433c"></i>D1 重庆→龙胜→桂林</span>
+  <span><i style="background:#e08a12"></i>D2 桂林→阳朔</span>
+  <span><i style="background:#2f9e44"></i>D3 阳朔→柳州</span>
+  <span><i style="background:#1971c2"></i>D4 柳州→小七孔→贵阳</span>
+  <span><i style="background:#9c36b5"></i>D5 贵阳→织金→遵义→重庆</span>
+  <span>🛏 = 当晚住宿 · 点任何地名可直接唤起高德导航</span>
+</div>
+</div>
+
+<!-- ③ 已确认预订 -->
+<h2 class="sec">已确认 · 机票 / 住宿 / 车辆 / 门票</h2>
+<div class="card">
+  <div class="bk-group">
+    <h3>✈️ 机票（点击机场可导航）</h3>
+    <table class="res">
+      <tbody><tr><td class="t">10.1 周四</td><td><a class="poi" data-to="87.474,43.907,乌鲁木齐天山国际机场" href="https://uri.amap.com/navigation?to=87.474%2C43.907%2C%E4%B9%8C%E9%B2%81%E6%9C%A8%E9%BD%90%E5%A4%A9%E5%B1%B1%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">乌鲁木齐天山</a> 16:20 → <a class="poi" data-to="106.644,29.726,重庆江北国际机场T3" href="https://uri.amap.com/navigation?to=106.644%2C29.726%2C%E9%87%8D%E5%BA%86%E6%B1%9F%E5%8C%97%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BAT3&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">重庆江北T3</a> 20:05<span class="tag ok">CZ6973 南航</span></td></tr>
+      <tr><td class="t">10.1 周四</td><td><a class="poi" data-to="93.010,43.500,巴里坤大河机场" href="https://uri.amap.com/navigation?to=93.010%2C43.500%2C%E5%B7%B4%E9%87%8C%E5%9D%A4%E5%A4%A7%E6%B2%B3%E6%9C%BA%E5%9C%BA&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">巴里坤大河</a> 17:25 → 重庆江北T3 20:50<span class="tag ok">EU2224 成都航空 · 3人</span></td></tr>
+      <tr><td class="t">10.1 周四</td><td><a class="poi" data-to="121.800,31.150,上海浦东国际机场T1" href="https://uri.amap.com/navigation?to=121.800%2C31.150%2C%E4%B8%8A%E6%B5%B7%E6%B5%A6%E4%B8%9C%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BAT1&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">上海浦东T1</a> 21:10 → 重庆江北T3 00:05+1<span class="tag ok">MU5433 东航</span></td></tr>
+      <tr><td class="t">10.7 周三</td><td>重庆江北T3 06:50 → <a class="poi" data-to="120.435,30.229,杭州萧山国际机场T3" href="https://uri.amap.com/navigation?to=120.435%2C30.229%2C%E6%9D%AD%E5%B7%9E%E8%90%A7%E5%B1%B1%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BAT3&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">杭州萧山T3</a> 09:10<span class="tag ok">GS6589 天津航空</span></td></tr>
+      <tr><td class="t">10.7 周三</td><td>重庆江北T3 07:20 → <a class="poi" data-to="94.107,40.190,敦煌莫高国际机场" href="https://uri.amap.com/navigation?to=94.107%2C40.190%2C%E6%95%A6%E7%85%8C%E8%8E%AB%E9%AB%98%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">敦煌莫高</a> 10:25，中转1h10 → <a class="poi" data-to="93.614,42.838,哈密伊州机场" href="https://uri.amap.com/navigation?to=93.614%2C42.838%2C%E5%93%88%E5%AF%86%E4%BC%8A%E5%B7%9E%E6%9C%BA%E5%9C%BA&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">哈密伊州</a> 12:30<span class="tag ok">GS6587+G54557 · 3人</span></td></tr>
+      <tr><td class="t">10.7 周三</td><td>重庆江北 16:50 → 乌鲁木齐天山 20:45<span class="tag ok">CZ6432 南航</span></td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="bk-group">
+    <h3>🏨 住宿（每晚 3 间 · 点击酒店名导航）</h3>
+    <div class="hotel">
+      <h4>10.1（周四）重庆 · 丽丰源酒店(中央公园西地铁站店) ×2间 ＋ 丽枫酒店(悦来国际博览中心中央公园店) ×1间</h4>
+      <p>两江新区同茂大道茂华路269号 吾悦广场（两店同楼，近集合点）<br>
+      丽枫 ☎ <a class="tel" href="tel:02365952666">023-65952666</a> · 丽丰源 ☎ 见订单"联系酒店"<br>
+      10.1 08:00 后可入住（丽丰源享提前入住）· 10.2 14:00 前退房（7:00 出发时直接退房）</p>
+    </div>
+    <div class="hotel">
+      <h4>10.2（周五）桂林 · 亚朵酒店(市政府万达广场店)</h4>
+      <p>临桂区奥园南路奥林匹克花园巴塞公寓1栋 · ☎ <a class="tel" href="tel:07738108999">0773-8108999</a><br>
+      10.2 入住 · 10.3 退房（从龙脊返程顺路，夜游双塔后约 23:00 到店）</p>
+    </div>
+    <div class="hotel">
+      <h4>10.3（周六）阳朔 · 蔚景温德姆酒店(遇龙河店)</h4>
+      <p>阳朔县新城山水大道凤凰山水尚境2栋 · ☎ <a class="tel" href="tel:07738817777">0773-8817777</a><br>
+      10.3 入住 · 10.4 退房（近十里画廊/遇龙河，D3 早上竹筏方便）</p>
+    </div>
+    <div class="hotel">
+      <h4>10.4（周日）柳州 · 全季酒店(柳东体育中心官塘大道店)</h4>
+      <p>鱼峰区文林路3号1楼 · ☎ <a class="tel" href="tel:07723028899">0772-3028899</a> / <a class="tel" href="tel:07723028866">0772-3028866</a><br>
+      10.4 入住 · 10.5 退房（楼下即美食街，停车场充足）</p>
+    </div>
+    <div class="hotel">
+      <h4>10.5（周一）贵阳 · 贵安新区希尔顿花园酒店(贵安高铁站店)</h4>
+      <p>贵安新区百马大道中段27号A号楼 · ☎ <a class="tel" href="tel:085188648888">0851-88648888</a><br>
+      10.5 入住 · 10.6 退房（在去织金洞方向上，次日出发顺路）</p>
+    </div>
+    <div class="hotel">
+      <h4>10.6（周二）返渝 · 当晚无住宿</h4>
+      <p>预计 21:30 后抵渝 → 晚餐 → 直接送机江北机场T3（10.7 早班机）</p>
+    </div>
+  </div>
+
+  <div class="bk-group">
+    <h3>🚗 车辆</h3>
+    <p style="font-size:.88rem">重庆租车自驾（已租好）· 6 人 · <b>3 位司机轮换</b> · 取还车门店/时间以订单为准，出发前核对油量、ETC、备胎</p>
+  </div>
+
+  <div class="bk-group">
+    <h3>🎫 门票</h3>
+    <p style="font-size:.88rem">全部尚未预订 <span class="tag">待订</span> —— 各景点票务规则、放票时间和入口已列入下方「待办清单」，按优先级尽快处理。</p>
+  </div>
+</div>
+
+<!-- ④ 逐日行程 -->
+<h2 class="sec">逐日行程 · 点地名导航 / 展开看当日路线</h2>
+
+<!-- D0 -->
+<details class="day" style="--c:#6b7280">
+  <summary>
+    <span class="d-badge" style="--c:#6b7280">D0<small>10.1 周四</small></span>
+    <div class="day-h"><h3>集结日 · 各地飞重庆</h3><p>重庆 · 住丽丰源＋丽枫（吾悦广场）</p></div>
+    <span class="chev">▾</span>
+  </summary>
+  <div class="day-body">
+    <ol class="tl">
+      <li><time>08:00</time><span class="dot"></span><div class="tl-c"><span class="tt">丽丰源可提前入住</span><div class="ds">乌鲁木齐 / 巴里坤朋友白天自行安排，酒店放行李休息</div></div></li>
+      <li><time>20:05</time><span class="dot"></span><div class="tl-c"><span class="tt">CZ6973 落地 江北T3</span><div class="ds">乌鲁木齐朋友 · 打车/地铁10号线至中央公园西，约25分钟</div></div></li>
+      <li><time>20:50</time><span class="dot"></span><div class="tl-c"><span class="tt">EU2224 落地 江北T3</span><div class="ds">巴里坤3位朋友 · 与上一班汇合</div></div></li>
+      <li><time>00:05</time><span class="dot"></span><div class="tl-c"><span class="tt">MU5433 落地 江北T3（10.2 凌晨）</span><div class="ds">上海朋友 · 落地打车直奔吾悦广场，约20分钟，尽快休息</div></div></li>
+    </ol>
+  </div>
+</details>
+
+<!-- D1 -->
+<details class="day" style="--c:#d9433c" open="">
+  <summary>
+    <span class="d-badge" style="--c:#d9433c">D1<small>10.2 周五</small></span>
+    <div class="day-h"><h3>重庆 → 龙胜 → 龙脊夜游 → 桂林</h3><p>约 780km · 全天最硬的一天 · 住桂林</p></div>
+    <span class="chev">▾</span>
+  </summary>
+  <div class="day-body">
+    <a class="multinav" data-from="106.527,29.719,金茂国际生态新城臻悦" data-to="110.203,25.247,亚朵酒店桂林市政府万达广场店" data-via="110.010,25.797,龙胜县城|110.100,25.820,龙脊梯田金坑大寨" href="https://uri.amap.com/navigation?from=106.527%2C29.719%2C%E9%87%91%E8%8C%82%E5%9B%BD%E9%99%85%E7%94%9F%E6%80%81%E6%96%B0%E5%9F%8E%E8%87%BB%E6%82%A6&amp;to=110.203%2C25.247%2C%E4%BA%9A%E6%9C%B5%E9%85%92%E5%BA%97%E6%A1%82%E6%9E%97%E5%B8%82%E6%94%BF%E5%BA%9C%E4%B8%87%E8%BE%BE%E5%B9%BF%E5%9C%BA%E5%BA%97&amp;via=110.010%2C25.797%2C%E9%BE%99%E8%83%9C%E5%8E%BF%E5%9F%8E%7C110.100%2C25.820%2C%E9%BE%99%E8%84%8A%E6%A2%AF%E7%94%B0%E9%87%91%E5%9D%91%E5%A4%A7%E5%AF%A8&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">🧭 全天多点导航（集合点→龙胜→金坑大寨→酒店）</a>
+    <svg class="minimap" viewBox="0 0 640 90" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40,50 C160,20 280,25 360,45 C430,62 470,30 520,28 C560,27 590,40 610,52" fill="none" stroke="#d9433c" stroke-width="3.5" stroke-linecap="round" filter="url(#wob)"></path>
+      <g font-size="12" font-weight="600" fill="currentColor">
+        <circle cx="40" cy="50" r="6" fill="#d9433c"></circle><text x="40" y="78" text-anchor="middle">集合点 7:00</text>
+        <circle cx="360" cy="45" r="5" fill="#d9433c"></circle><text x="352" y="78" text-anchor="middle">龙胜 16:30</text>
+        <circle cx="520" cy="28" r="5" fill="#d9433c"></circle><text x="520" y="16" text-anchor="middle">金坑大寨 18:30</text>
+        <circle cx="610" cy="52" r="6" fill="#d9433c"></circle><text x="606" y="78" text-anchor="middle">桂林 22:00</text>
+      </g>
+    </svg>
+    <ol class="tl">
+      <li><time>07:00</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="106.527,29.719,金茂国际生态新城臻悦" href="https://uri.amap.com/navigation?to=106.527%2C29.719%2C%E9%87%91%E8%8C%82%E5%9B%BD%E9%99%85%E7%94%9F%E6%80%81%E6%96%B0%E5%9F%8E%E8%87%BB%E6%82%A6&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">金茂国际生态新城臻悦</a> 集合</span><div class="ds">早餐＋采购路粮 · 行李装车 · 检查油量/ETC</div></div></li>
+      <li><time>07:30</time><span class="dot"></span><div class="tl-c"><span class="tt">出发 → 兰海/泉南高速</span><div class="drive">🚗 745km · 预计 9 小时（黄金周首日，堵车概率高，按 10 小时预期）</div></div></li>
+      <li><time>16:30</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="110.010,25.797,龙胜县城" href="https://uri.amap.com/navigation?to=110.010%2C25.797%2C%E9%BE%99%E8%83%9C%E5%8E%BF%E5%9F%8E&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">龙胜县城</a> 晚餐</span><div class="ds">瑞雪米皮 / 老曾烧烤，二选一，抓紧吃</div></div></li>
+      <li><time>17:40</time><span class="dot"></span><div class="tl-c"><span class="tt">上山 → <a class="poi" data-to="110.100,25.820,龙脊梯田金坑大寨" href="https://uri.amap.com/navigation?to=110.100%2C25.820%2C%E9%BE%99%E8%84%8A%E6%A2%AF%E7%94%B0%E9%87%91%E5%9D%91%E5%A4%A7%E5%AF%A8&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">龙脊梯田·金坑大寨</a></span><div class="drive">🚗 约 36km 山路 1 小时 · 私家车停游客中心，换乘景区观光车</div><div class="ds">门票 80 元/人<span class="bk on-site">现场购票</span> · 景区电话 <a href="tel:07737583188">0773-7583188</a></div></div></li>
+      <li><time>20:00</time><span class="dot"></span><div class="tl-c"><span class="tt">「龙脊之夜」灯光秀 🔥</span><div class="ds">20:00–21:30 大寨村广场：蓝白光束灯＋红瑶《晒红衣》＋篝火＋非遗市集（10.1–10.5 每晚）</div></div></li>
+      <li><time>21:30</time><span class="dot"></span><div class="tl-c"><span class="tt">下山 → <a class="poi" data-to="110.203,25.247,亚朵酒店桂林市政府万达广场店" href="https://uri.amap.com/navigation?to=110.203%2C25.247%2C%E4%BA%9A%E6%9C%B5%E9%85%92%E5%BA%97%E6%A1%82%E6%9E%97%E5%B8%82%E6%94%BF%E5%BA%9C%E4%B8%87%E8%BE%BE%E5%B9%BF%E5%9C%BA%E5%BA%97&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">桂林亚朵</a></span><div class="drive">🚗 约 80km · 1.5h 夜路山路＋高速，司机轮换</div><div class="ds">约 23:00 入住；<b>日月双塔夜景（23:00 关灯）视到达时间取舍，赶不上就 D2 早晚补</b></div></div></li>
+      <li><time>23:30</time><span class="dot"></span><div class="tl-c"><span class="tt">夜宵（可选）</span><div class="ds"><a class="poi" data-to="110.295,25.278,金龙寨" href="https://uri.amap.com/navigation?to=110.295%2C25.278%2C%E9%87%91%E9%BE%99%E5%AF%A8&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">金龙寨</a>（24H）· 酒店斜对面商圈也可</div></div></li>
+    </ol>
+  </div>
+</details>
+
+<!-- D2 -->
+<details class="day" style="--c:#e08a12">
+  <summary>
+    <span class="d-badge" style="--c:#e08a12">D2<small>10.3 周六</small></span>
+    <div class="day-h"><h3>桂林市区 → 相公山 → 金龙巡游 → 阳朔</h3><p>约 130km · 今晚 20:00 全员抢竹筏票 · 住阳朔</p></div>
+    <span class="chev">▾</span>
+  </summary>
+  <div class="day-body">
+    <a class="multinav" data-from="110.203,25.247,亚朵酒店桂林市政府万达广场店" data-to="110.445,24.810,阳朔蔚景温德姆酒店遇龙河店" data-via="110.2935,25.2680,象鼻山|110.640,24.825,相公山|110.418,24.893,金龙桥码头" href="https://uri.amap.com/navigation?from=110.203%2C25.247%2C%E4%BA%9A%E6%9C%B5%E9%85%92%E5%BA%97%E6%A1%82%E6%9E%97%E5%B8%82%E6%94%BF%E5%BA%9C%E4%B8%87%E8%BE%BE%E5%B9%BF%E5%9C%BA%E5%BA%97&amp;to=110.445%2C24.810%2C%E9%98%B3%E6%9C%94%E8%94%9A%E6%99%AF%E6%B8%A9%E5%BE%B7%E5%A7%86%E9%85%92%E5%BA%97%E9%81%87%E9%BE%99%E6%B2%B3%E5%BA%97&amp;via=110.2935%2C25.2680%2C%E8%B1%A1%E9%BC%BB%E5%B1%B1%7C110.640%2C24.825%2C%E7%9B%B8%E5%85%AC%E5%B1%B1%7C110.418%2C24.893%2C%E9%87%91%E9%BE%99%E6%A1%A5%E7%A0%81%E5%A4%B4&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">🧭 全天多点导航（酒店→象鼻山→相公山→金龙桥→温德姆）</a>
+    <svg class="minimap" viewBox="0 0 640 90" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30,60 C120,25 200,55 260,48 C330,40 380,20 450,35 C520,50 570,60 610,62" fill="none" stroke="#e08a12" stroke-width="3.5" stroke-linecap="round" filter="url(#wob)"></path>
+      <g font-size="12" font-weight="600" fill="currentColor">
+        <circle cx="30" cy="60" r="6" fill="#e08a12"></circle><text x="30" y="84" text-anchor="middle">亚朵 7:00</text>
+        <circle cx="260" cy="48" r="5" fill="#e08a12"></circle><text x="255" y="84" text-anchor="middle">象鼻山 8:00</text>
+        <circle cx="450" cy="35" r="5" fill="#e08a12"></circle><text x="450" y="22" text-anchor="middle">相公山 13:30</text>
+        <circle cx="610" cy="62" r="6" fill="#e08a12"></circle><text x="600" y="84" text-anchor="middle">阳朔 18:00</text>
+      </g>
+    </svg>
+    <ol class="tl">
+      <li><time>07:00</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="110.300,25.285,老东江米粉桂林" href="https://uri.amap.com/navigation?to=110.300%2C25.285%2C%E8%80%81%E4%B8%9C%E6%B1%9F%E7%B1%B3%E7%B2%89%E6%A1%82%E6%9E%97&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">老东江米粉</a> 早餐</span><div class="ds">市区店，顺路进城</div></div></li>
+      <li><time>08:00</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="110.2935,25.2680,象鼻山景区" href="https://uri.amap.com/navigation?to=110.2935%2C25.2680%2C%E8%B1%A1%E9%BC%BB%E5%B1%B1%E6%99%AF%E5%8C%BA&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">象鼻山</a><span class="bk free">免费·需预约</span></span><div class="ds">实名分时预约（小程序"桂林全域旅游网"），<b>1 个手机号限 3 张，需 2 个手机号各约 3 张</b>，约 8:00–10:00 时段 · ☎ 0773-2582112</div></div></li>
+      <li><time>09:00</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="110.2995,25.2790,正阳步行街东西巷" href="https://uri.amap.com/navigation?to=110.2995%2C25.2790%2C%E6%AD%A3%E9%98%B3%E6%AD%A5%E8%A1%8C%E8%A1%97%E4%B8%9C%E8%A5%BF%E5%B7%B7&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">正阳步行街 · 东西巷</a></span><div class="ds">逛吃拍照，滨江道看漓江</div></div></li>
+      <li><time>11:00</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="110.297,25.265,阿甘酒家桂林" href="https://uri.amap.com/navigation?to=110.297%2C25.265%2C%E9%98%BF%E7%94%98%E9%85%92%E5%AE%B6%E6%A1%82%E6%9E%97&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">阿甘酒家</a> 午餐</span><div class="ds">啤酒鱼先吃为敬</div></div></li>
+      <li><time>12:00</time><span class="dot"></span><div class="tl-c"><span class="tt">出发 <a class="poi" data-to="110.640,24.825,相公山" href="https://uri.amap.com/navigation?to=110.640%2C24.825%2C%E7%9B%B8%E5%85%AC%E5%B1%B1&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">相公山</a></span><div class="drive">🚗 58km · 1.5h 山路</div><div class="ds">门票现场购买<span class="bk on-site">现场购票</span> · 山顶俯瞰漓江湾</div></div></li>
+      <li><time>16:00</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="110.658,24.852,千里江山图观景点兴坪" href="https://uri.amap.com/navigation?to=110.658%2C24.852%2C%E5%8D%83%E9%87%8C%E6%B1%9F%E5%B1%B1%E5%9B%BE%E8%A7%82%E6%99%AF%E7%82%B9%E5%85%B4%E5%9D%AA&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">「千里江山图」观景点</a></span><div class="ds">兴坪段漓江山景，离相公山约 8km</div></div></li>
+      <li><time>18:00</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="110.418,24.893,金龙桥码头" href="https://uri.amap.com/navigation?to=110.418%2C24.893%2C%E9%87%91%E9%BE%99%E6%A1%A5%E7%A0%81%E5%A4%B4&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">金龙巡游 · 金龙桥码头</a><span class="bk">需预约</span></span><div class="ds">遇龙河景区小程序购票 · 晚霞中的竹筏巡游</div></div></li>
+      <li><time>19:30</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="110.494,24.779,望江楼阳朔" href="https://uri.amap.com/navigation?to=110.494%2C24.779%2C%E6%9C%9B%E6%B1%9F%E6%A5%BC%E9%98%B3%E6%9C%94&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">望江楼</a> 晚餐</span><div class="ds">21:00 打烊，注意时间 · 餐后入住 <a class="poi" data-to="110.445,24.810,阳朔蔚景温德姆酒店遇龙河店" href="https://uri.amap.com/navigation?to=110.445%2C24.810%2C%E9%98%B3%E6%9C%94%E8%94%9A%E6%99%AF%E6%B8%A9%E5%BE%B7%E5%A7%86%E9%85%92%E5%BA%97%E9%81%87%E9%BE%99%E6%B2%B3%E5%BA%97&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">蔚景温德姆(遇龙河店)</a></div></div></li>
+    </ol>
+    <div class="remind">⏰ <b>今晚 20:00 全员闹钟！</b>"遇龙河"或"i游阳朔"小程序放 10.4 次日票，水厄底→综合段几分钟内抢光：提前把 6 人身份证信息录好，20:00 准点抢 3 筏（200元/筏）。</div>
+  </div>
+</details>
+
+<!-- D3 -->
+<details class="day" style="--c:#2f9e44">
+  <summary>
+    <span class="d-badge" style="--c:#2f9e44">D3<small>10.4 周日</small></span>
+    <div class="day-h"><h3>遇龙河竹筏 → 兴坪 → 地形车 → 柳州</h3><p>约 180km · 住柳州（楼下就是螺蛳粉）</p></div>
+    <span class="chev">▾</span>
+  </summary>
+  <div class="day-body">
+    <a class="multinav" data-from="110.445,24.810,阳朔蔚景温德姆酒店遇龙河店" data-to="109.516,24.362,全季酒店柳州柳东体育中心官塘大道店" data-via="110.444,24.782,水厄底码头|110.668,24.846,兴坪古镇" href="https://uri.amap.com/navigation?from=110.445%2C24.810%2C%E9%98%B3%E6%9C%94%E8%94%9A%E6%99%AF%E6%B8%A9%E5%BE%B7%E5%A7%86%E9%85%92%E5%BA%97%E9%81%87%E9%BE%99%E6%B2%B3%E5%BA%97&amp;to=109.516%2C24.362%2C%E5%85%A8%E5%AD%A3%E9%85%92%E5%BA%97%E6%9F%B3%E5%B7%9E%E6%9F%B3%E4%B8%9C%E4%BD%93%E8%82%B2%E4%B8%AD%E5%BF%83%E5%AE%98%E5%A1%98%E5%A4%A7%E9%81%93%E5%BA%97&amp;via=110.444%2C24.782%2C%E6%B0%B4%E5%8E%84%E5%BA%95%E7%A0%81%E5%A4%B4%7C110.668%2C24.846%2C%E5%85%B4%E5%9D%AA%E5%8F%A4%E9%95%87&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">🧭 全天多点导航（酒店→水厄底→兴坪→柳州全季）</a>
+    <svg class="minimap" viewBox="0 0 640 90" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40,30 C100,60 160,55 220,42 C300,26 420,40 520,55 C560,62 590,60 610,58" fill="none" stroke="#2f9e44" stroke-width="3.5" stroke-linecap="round" filter="url(#wob)"></path>
+      <g font-size="12" font-weight="600" fill="currentColor">
+        <circle cx="40" cy="30" r="6" fill="#2f9e44"></circle><text x="40" y="18" text-anchor="middle">温德姆 7:00</text>
+        <circle cx="220" cy="42" r="5" fill="#2f9e44"></circle><text x="220" y="66" text-anchor="middle">水厄底 7:40</text>
+        <circle cx="340" cy="34" r="5" fill="#2f9e44"></circle><text x="340" y="58" text-anchor="middle">兴坪 10:00</text>
+        <circle cx="610" cy="58" r="6" fill="#2f9e44"></circle><text x="600" y="82" text-anchor="middle">柳州 18:00</text>
+      </g>
+    </svg>
+    <ol class="tl">
+      <li><time>07:00</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="110.492,24.776,糯香驿站阳朔" href="https://uri.amap.com/navigation?to=110.492%2C24.776%2C%E7%B3%AF%E9%A6%99%E9%A9%BF%E7%AB%99%E9%98%B3%E6%9C%94&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">糯香驿站</a> 早餐</span><div class="ds">吃完直接去码头，赶 7:40 头班</div></div></li>
+      <li><time>07:40</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="110.444,24.782,水厄底码头" href="https://uri.amap.com/navigation?to=110.444%2C24.782%2C%E6%B0%B4%E5%8E%84%E5%BA%95%E7%A0%81%E5%A4%B4&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">遇龙河竹筏</a> 水厄底 → 综合码头<span class="bk hot">昨晚20:00已抢</span></span><div class="ds">双人筏 200元/筏 ×3 · 约 40 分钟 · 冲坝水花大，备换洗衣物＋手机挂绳 · 限重：单人≤200斤，双人合计≤320斤 · 上岸有 10 元/人接驳车回水厄底取车</div></div></li>
+      <li><time>10:00</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="110.668,24.846,兴坪古镇" href="https://uri.amap.com/navigation?to=110.668%2C24.846%2C%E5%85%B4%E5%9D%AA%E5%8F%A4%E9%95%87&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">兴坪古镇</a></span><div class="ds">20元人民币背景打卡 · 古街慢逛</div></div></li>
+      <li><time>12:00</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="110.667,24.845,杰仔兴坪" href="https://uri.amap.com/navigation?to=110.667%2C24.845%2C%E6%9D%B0%E4%BB%94%E5%85%B4%E5%9D%AA&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">杰仔</a> 午餐</span><div class="ds">兴坪本地菜</div></div></li>
+      <li><time>14:00</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="110.490,24.775,小马地形车阳朔" href="https://uri.amap.com/navigation?to=110.490%2C24.775%2C%E5%B0%8F%E9%A9%AC%E5%9C%B0%E5%BD%A2%E8%BD%A6%E9%98%B3%E6%9C%94&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">小马地形车</a></span><div class="ds">越野地形车穿越田园喀斯特<span class="bk on-site">现场购票</span></div></div></li>
+      <li><time>15:30</time><span class="dot"></span><div class="tl-c"><span class="tt">出发 柳州</span><div class="drive">🚗 169km · 2h10 高速</div></div></li>
+      <li><time>18:00</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="109.516,24.362,全季酒店柳州柳东体育中心官塘大道店" href="https://uri.amap.com/navigation?to=109.516%2C24.362%2C%E5%85%A8%E5%AD%A3%E9%85%92%E5%BA%97%E6%9F%B3%E5%B7%9E%E6%9F%B3%E4%B8%9C%E4%BD%93%E8%82%B2%E4%B8%AD%E5%BF%83%E5%AE%98%E5%A1%98%E5%A4%A7%E9%81%93%E5%BA%97&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">全季(柳东)</a> 入住</span><div class="ds">放下行李再出门觅食</div></div></li>
+      <li><time>19:00</time><span class="dot"></span><div class="tl-c"><span class="tt">螺蛳粉三连</span><div class="ds"><a class="poi" data-to="109.414,24.319,娇姐老牌螺蛳粉柳州" href="https://uri.amap.com/navigation?to=109.414%2C24.319%2C%E5%A8%87%E5%A7%90%E8%80%81%E7%89%8C%E8%9E%BA%E8%9B%B3%E7%B2%89%E6%9F%B3%E5%B7%9E&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">娇姐老牌螺蛳粉</a> → <a class="poi" data-to="109.412,24.320,张飞木薯羹柳州" href="https://uri.amap.com/navigation?to=109.412%2C24.320%2C%E5%BC%A0%E9%A3%9E%E6%9C%A8%E8%96%AF%E7%BE%B9%E6%9F%B3%E5%B7%9E&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">张飞木薯羹</a> → <a class="poi" data-to="109.411,24.321,每日鲜古早味柳州" href="https://uri.amap.com/navigation?to=109.411%2C24.321%2C%E6%AF%8F%E6%97%A5%E9%B2%9C%E5%8F%A4%E6%97%A9%E5%91%B3%E6%9F%B3%E5%B7%9E&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">每日鲜古早味</a>（市区，单程约25分钟）</div></div></li>
+      <li><time>21:00</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="109.416,24.315,柳江喷泉江滨公园" href="https://uri.amap.com/navigation?to=109.416%2C24.315%2C%E6%9F%B3%E6%B1%9F%E5%96%B7%E6%B3%89%E6%B1%9F%E6%BB%A8%E5%85%AC%E5%9B%AD&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">柳江音乐喷泉</a></span><div class="ds">20:00 / 21:00 各一场，江边看即可</div></div></li>
+      <li><time>22:00</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="109.410,24.320,蒙记老牌豆浆柳州" href="https://uri.amap.com/navigation?to=109.410%2C24.320%2C%E8%92%99%E8%AE%B0%E8%80%81%E7%89%8C%E8%B1%86%E6%B5%86%E6%9F%B3%E5%B7%9E&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">蒙记老牌豆浆</a> 收尾</span><div class="ds">回酒店，明天又是 500km+</div></div></li>
+    </ol>
+  </div>
+</details>
+
+<!-- D4 -->
+<details class="day" style="--c:#1971c2">
+  <summary>
+    <span class="d-badge" style="--c:#1971c2">D4<small>10.5 周一</small></span>
+    <div class="day-h"><h3>柳州 → 荔波小七孔 → 贵阳/贵安</h3><p>约 530km · 全程无回头路 · 住贵安</p></div>
+    <span class="chev">▾</span>
+  </summary>
+  <div class="day-body">
+    <a class="multinav" data-from="109.516,24.362,全季酒店柳州柳东体育中心官塘大道店" data-to="106.601,26.440,贵阳贵安新区希尔顿花园酒店" data-via="107.870,25.270,小七孔景区东门|106.7195,26.5735,甲秀楼" href="https://uri.amap.com/navigation?from=109.516%2C24.362%2C%E5%85%A8%E5%AD%A3%E9%85%92%E5%BA%97%E6%9F%B3%E5%B7%9E%E6%9F%B3%E4%B8%9C%E4%BD%93%E8%82%B2%E4%B8%AD%E5%BF%83%E5%AE%98%E5%A1%98%E5%A4%A7%E9%81%93%E5%BA%97&amp;to=106.601%2C26.440%2C%E8%B4%B5%E9%98%B3%E8%B4%B5%E5%AE%89%E6%96%B0%E5%8C%BA%E5%B8%8C%E5%B0%94%E9%A1%BF%E8%8A%B1%E5%9B%AD%E9%85%92%E5%BA%97&amp;via=107.870%2C25.270%2C%E5%B0%8F%E4%B8%83%E5%AD%94%E6%99%AF%E5%8C%BA%E4%B8%9C%E9%97%A8%7C106.7195%2C26.5735%2C%E7%94%B2%E7%A7%80%E6%A5%BC&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">🧭 全天多点导航（全季→小七孔→甲秀楼→希尔顿）</a>
+    <svg class="minimap" viewBox="0 0 640 90" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40,40 C140,55 260,70 340,62 C420,55 500,35 560,40 C585,43 600,50 610,56" fill="none" stroke="#1971c2" stroke-width="3.5" stroke-linecap="round" filter="url(#wob)"></path>
+      <g font-size="12" font-weight="600" fill="currentColor">
+        <circle cx="40" cy="40" r="6" fill="#1971c2"></circle><text x="40" y="24" text-anchor="middle">全季 7:00</text>
+        <circle cx="340" cy="62" r="5" fill="#1971c2"></circle><text x="340" y="84" text-anchor="middle">小七孔 12:00</text>
+        <circle cx="560" cy="40" r="5" fill="#1971c2"></circle><text x="560" y="26" text-anchor="middle">甲秀楼 21:30</text>
+        <circle cx="610" cy="56" r="6" fill="#1971c2"></circle><text x="602" y="80" text-anchor="middle">贵安</text>
+      </g>
+    </svg>
+    <ol class="tl">
+      <li><time>07:00</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="109.400,24.327,广雅云吞柳州" href="https://uri.amap.com/navigation?to=109.400%2C24.327%2C%E5%B9%BF%E9%9B%85%E4%BA%91%E5%90%9E%E6%9F%B3%E5%B7%9E&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">广雅云吞</a> 早餐 → 出发</span><div class="drive">🚗 292km · 约 4 小时</div></div></li>
+      <li><time>12:00</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="107.870,25.270,小七孔景区东门" href="https://uri.amap.com/navigation?to=107.870%2C25.270%2C%E5%B0%8F%E4%B8%83%E5%AD%94%E6%99%AF%E5%8C%BA%E4%B8%9C%E9%97%A8&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">小七孔景区</a>（东门进）<span class="bk hot">需提前预约</span></span><div class="ds">旺季门票 120＋观光车 40＋保险 10 元/人，实名预约刷身份证入园 · ☎ <a href="tel:08543516116">0854-3516116</a> · <b>16:00 停止售票</b>，黄金周停车紧张，尽量 12:00 前到</div><div class="ds">推荐动线：东门进 → 小七孔古桥 → 68级跌水/拉雅瀑布 → 水上森林 → 翠谷瀑布 → 观光车直达卧龙潭 → 出园</div></div></li>
+      <li><time>16:00</time><span class="dot"></span><div class="tl-c"><span class="tt">出园 → 奔贵阳</span><div class="drive">🚗 约 250km · 3h</div></div></li>
+      <li><time>19:30</time><span class="dot"></span><div class="tl-c"><span class="tt">晚餐</span><div class="ds">佳乡烟火焰锅 / 火上鲜铁板烧 · <b>建议在贵安或高速沿线解决</b>（市区单程多 40 分钟，当天已开 500km+）</div></div></li>
+      <li><time>21:30</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="106.7195,26.5735,甲秀楼" href="https://uri.amap.com/navigation?to=106.7195%2C26.5735%2C%E7%94%B2%E7%A7%80%E6%A5%BC&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">甲秀楼</a> 夜景（可选赶场）</span><div class="ds">22:00 关灯，纯外围打卡即可 · 贵阳白宫 0:00 关灯，量力而行</div></div></li>
+      <li><time>22:30</time><span class="dot"></span><div class="tl-c"><span class="tt">入住 <a class="poi" data-to="106.601,26.440,贵阳贵安新区希尔顿花园酒店" href="https://uri.amap.com/navigation?to=106.601%2C26.440%2C%E8%B4%B5%E9%98%B3%E8%B4%B5%E5%AE%89%E6%96%B0%E5%8C%BA%E5%B8%8C%E5%B0%94%E9%A1%BF%E8%8A%B1%E5%9B%AD%E9%85%92%E5%BA%97&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">贵安希尔顿花园</a></span><div class="ds">酒店在去织金方向上，明早出发不绕路</div></div></li>
+    </ol>
+  </div>
+</details>
+
+<!-- D5 -->
+<details class="day" style="--c:#9c36b5">
+  <summary>
+    <span class="d-badge" style="--c:#9c36b5">D5<small>10.6 周二</small></span>
+    <div class="day-h"><h3>贵阳 → 织金洞 → 遵义 → 返渝</h3><p>约 550km · 国庆返程高峰日 · 晚餐后送机</p></div>
+    <span class="chev">▾</span>
+  </summary>
+  <div class="day-body">
+    <a class="multinav" data-from="106.601,26.440,贵阳贵安新区希尔顿花园酒店" data-to="106.644,29.726,重庆江北国际机场T3" data-via="105.767,26.815,织金洞景区|106.9183,27.6887,遵义会议会址" href="https://uri.amap.com/navigation?from=106.601%2C26.440%2C%E8%B4%B5%E9%98%B3%E8%B4%B5%E5%AE%89%E6%96%B0%E5%8C%BA%E5%B8%8C%E5%B0%94%E9%A1%BF%E8%8A%B1%E5%9B%AD%E9%85%92%E5%BA%97&amp;to=106.644%2C29.726%2C%E9%87%8D%E5%BA%86%E6%B1%9F%E5%8C%97%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BAT3&amp;via=105.767%2C26.815%2C%E7%BB%87%E9%87%91%E6%B4%9E%E6%99%AF%E5%8C%BA%7C106.9183%2C27.6887%2C%E9%81%B5%E4%B9%89%E4%BC%9A%E8%AE%AE%E4%BC%9A%E5%9D%80&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">🧭 全天多点导航（希尔顿→织金洞→遵义会址→重庆）</a>
+    <svg class="minimap" viewBox="0 0 640 90" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40,62 C110,68 170,50 220,45 C290,38 380,30 460,38 C520,44 570,52 610,48" fill="none" stroke="#9c36b5" stroke-width="3.5" stroke-linecap="round" filter="url(#wob)"></path>
+      <g font-size="12" font-weight="600" fill="currentColor">
+        <circle cx="40" cy="62" r="6" fill="#9c36b5"></circle><text x="46" y="82" text-anchor="middle">贵安 7:00</text>
+        <circle cx="220" cy="45" r="5" fill="#9c36b5"></circle><text x="220" y="30" text-anchor="middle">织金洞 8:30</text>
+        <circle cx="460" cy="38" r="5" fill="#9c36b5"></circle><text x="460" y="24" text-anchor="middle">遵义 15:30</text>
+        <circle cx="610" cy="48" r="6" fill="#9c36b5"></circle><text x="598" y="72" text-anchor="middle">重庆 21:30</text>
+      </g>
+    </svg>
+    <ol class="tl">
+      <li><time>07:00</time><span class="dot"></span><div class="tl-c"><span class="tt">退房出发（早餐打包/服务区）</span><div class="drive">🚗 约 100km · 1.5h</div></div></li>
+      <li><time>08:30</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="105.767,26.815,织金洞景区" href="https://uri.amap.com/navigation?to=105.767%2C26.815%2C%E7%BB%87%E9%87%91%E6%B4%9E%E6%99%AF%E5%8C%BA&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">织金洞</a>（3号停车场）<span class="bk hot">需提前购票</span></span><div class="ds">门票 110＋交通车 28＋保险 10 元/人 · 游览 2–2.5h（洞内 4.5km 步道）· ☎ <a href="tel:08577812063">0857-7812063</a> · 洞内约 14℃，带薄外套</div></div></li>
+      <li><time>11:30</time><span class="dot"></span><div class="tl-c"><span class="tt">出洞 → 奔遵义</span><div class="drive">🚗 192km · 2.5h</div></div></li>
+      <li><time>14:00</time><span class="dot"></span><div class="tl-c"><span class="tt">遵义午餐 · 番茄鸡</span><div class="ds">抓紧吃，下午还有一站</div></div></li>
+      <li><time>15:30</time><span class="dot"></span><div class="tl-c"><span class="tt"><a class="poi" data-to="106.9183,27.6887,遵义会议会址" href="https://uri.amap.com/navigation?to=106.9183%2C27.6887%2C%E9%81%B5%E4%B9%89%E4%BC%9A%E8%AE%AE%E4%BC%9A%E5%9D%80&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">遵义会议会址</a><span class="bk free">免费·需预约</span></span><div class="ds">法定节假日周一正常开放 · 开放至 21:00（20:30 停止入馆）· 公众号"遵义会议纪念馆"预约 · <b>会址路禁行，导航"</b><a class="poi" data-to="106.916,27.690,遵义会议纪念广场停车场" href="https://uri.amap.com/navigation?to=106.916%2C27.690%2C%E9%81%B5%E4%B9%89%E4%BC%9A%E8%AE%AE%E7%BA%AA%E5%BF%B5%E5%B9%BF%E5%9C%BA%E5%81%9C%E8%BD%A6%E5%9C%BA&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener"><b>纪念广场停车场</b></a><b>"</b> · ☎ <a href="tel:085128229870">0851-28229870</a></div></div></li>
+      <li><time>17:00</time><span class="dot"></span><div class="tl-c"><span class="tt">出发返渝</span><div class="drive">🚗 262km · 3h50（10.6 返程高峰，G75 可能＋1–2h）</div></div></li>
+      <li><time>21:30</time><span class="dot"></span><div class="tl-c"><span class="tt">抵达重庆 → 晚餐 → 送机</span><div class="ds">晚餐后直接去 <a class="poi" data-to="106.644,29.726,重庆江北国际机场T3" href="https://uri.amap.com/navigation?to=106.644%2C29.726%2C%E9%87%8D%E5%BA%86%E6%B1%9F%E5%8C%97%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BAT3&amp;mode=car&amp;src=tripbook&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">江北机场T3</a>：上海朋友 10.7 06:50 起飞（05:20 前到机场）、巴里坤 07:20 起飞、乌鲁木齐 16:50 起飞</div></div></li>
+    </ol>
+  </div>
+</details>
+
+<!-- D6 -->
+<details class="day" style="--c:#6b7280">
+  <summary>
+    <span class="d-badge" style="--c:#6b7280">D6<small>10.7 周三</small></span>
+    <div class="day-h"><h3>返程日 · 各回各家</h3><p>三班飞机 · 一路平安</p></div>
+    <span class="chev">▾</span>
+  </summary>
+  <div class="day-body">
+    <ol class="tl">
+      <li><time>06:50</time><span class="dot"></span><div class="tl-c"><span class="tt">GS6589 起飞 → 杭州萧山 09:10</span><div class="ds">上海朋友</div></div></li>
+      <li><time>07:20</time><span class="dot"></span><div class="tl-c"><span class="tt">GS6587 起飞 → 敦煌 10:25 中转 G54557 → 哈密 12:30</span><div class="ds">巴里坤 3 位朋友 · 中转 1h10，走"中转联程"通道</div></div></li>
+      <li><time>16:50</time><span class="dot"></span><div class="tl-c"><span class="tt">CZ6432 起飞 → 乌鲁木齐 20:45</span><div class="ds">乌鲁木齐朋友 · 白天可在机场附近休息</div></div></li>
+    </ol>
+  </div>
+</details>
+
+<!-- ⑤ 待办清单 -->
+<h2 class="sec">待办清单 · 办完一项说一声，我来更新页面</h2>
+<div class="card">
+  <ol class="todo">
+    <li><div><span class="when">【立刻】</span>小七孔门票＋观光车（10.5 12:00 入园）<p>"一码游贵州"小程序 / 云游荔波小程序 · 170元/人（120门票＋40观光车＋10保险）· 6 人实名 · 16:00 停止入园 · ☎ 0854-3516116</p></div></li>
+    <li><div><span class="when">【立刻】</span>织金洞门票（10.6 最早场次 8:30）<p>"一码游贵州"小程序 / 携程 · 148元/人（110门票＋28交通＋10保险）· ☎ 0857-7812063</p></div></li>
+    <li><div><span class="when">【10.3 晚 20:00 · 全员闹钟】</span>遇龙河竹筏 水厄底→综合 3 筏（10.4 7:40）<p>小程序"遇龙河"或"i游阳朔" · 提前录入 6 人身份证 · 200元/筏 · 抢不到备选：骥马→工农桥段，或当天现场碰运气</p></div></li>
+    <li><div><span class="when">【尽快】</span>象鼻山免费预约（10.3 8:00–10:00 时段）<p>小程序"桂林全域旅游网" · 1 个手机号限 3 张 → <b>用 2 个手机号各约 3 张</b></p></div></li>
+    <li><div><span class="when">【尽快】</span>遵义会议会址预约（10.6 15:30）<p>微信公众号"遵义会议纪念馆" → 游客预约 · 免费 · 可约当天，但假期人多建议提前</p></div></li>
+    <li><div><span class="when">【尽快】</span>金龙巡游（10.3 18:00 · 金龙桥码头）<p>"遇龙河"小程序购票</p></div></li>
+    <li><div><span class="when">【出发前】</span>租车交接核对<p>取还车门店时间、验车拍照、油量/ETC/胎压 · 确认 3 位司机的驾驶分工</p></div></li>
+    <li><div><span class="when">【出发前】</span>全员身份证必带<p>竹筏、象鼻山、小七孔、织金洞、遵义会址、酒店入住全部实名</p></div></li>
+    <li><div><span class="when">【可选】</span>相公山门票（现场购买）、日月双塔公园门票（夜景外围免费，进塔另付 30 元）<p></p></div></li>
+  </ol>
+</div>
+
+<!-- ⑥ 实用贴士 -->
+<h2 class="sec">实用贴士</h2>
+<div class="card">
+  <ul class="tips">
+    <li><b>时区</b>：全程北京时间（UTC+8），页面倒计时已自动换算，手机改时区也不影响。</li>
+    <li><b>黄金周路况</b>：D1 出渝、D5 返渝都是全年最堵时段，时间表按"＋1~2 小时"预期；每天由 3 位司机轮换，每 2 小时一换，夜路必须两人清醒。</li>
+    <li><b>灯光时刻表</b>：龙脊之夜 20:00–21:30（仅 10.1–10.5）｜日月双塔约 23:00 关灯｜甲秀楼 22:00 关灯｜贵阳白宫 0:00 关灯｜柳江喷泉 20:00 / 21:00 各一场。</li>
+    <li><b>竹筏须知</b>：纯人工撑筏，冲坝水花大——备整套换洗衣物、手机防水挂绳；单人超 200 斤或双人超 320 斤需分筏；1 米以下儿童、孕妇不可乘。</li>
+    <li><b>停车攻略</b>：龙脊私家车只停游客中心（约30元/天），寨内靠观光车｜遵义会址路禁行，导"纪念广场停车场"｜小七孔黄金周车位紧张，12:00 前到｜织金洞停 3 号停车场。</li>
+    <li><b>穿衣</b>：山区早晚温差大（织金洞内约14℃），防滑运动鞋＋薄外套；水上项目防晒帽＋冰袖。</li>
+    <li><b>天气</b>：出发前重庆预报有中雨，关注航班动态（MU5433 凌晨落地，可购延误险）。</li>
+    <li><b>应急</b>：报警 110 · 急救 120 · 高速救援 12122 · 保险/事故先拍照移车。</li>
+    <li><b>本页可离线</b>：先在有网时打开一次，之后断网也能看行程；导航按钮需联网唤起高德。</li>
+    <li><b>隐私</b>：本页为公开链接，不包含任何确认号、证件号、房间号与个人信息。</li>
+  </ul>
+</div>
+
+<footer>
+  地图坐标为近似值，导航以地名检索为准 · 行程信息提取自已确认订单<br>
+  桂黔环线自驾手册 · 2026 国庆 · 祝一路平安 🚗
+</footer>
+
+</div>
+<script>
+(function(){
+  /* ---------- 时区：全部按北京时间 UTC+8 ---------- */
+  function bjParts(){
+    var m = new Date(Date.now() + (480 - new Date().getTimezoneOffset())*60000);
+    return m; /* 已换算成北京时间的"伪本地时间" */
+  }
+  function bjMinutes(){
+    var t = (Date.now()/60000 + 480) % 1440;
+    return t < 0 ? t + 1440 : t;
+  }
+  /* ---------- 昼夜主题（北京时间 6:30–18:30 为白天） ---------- */
+  function theme(){
+    var m = bjMinutes();
+    document.documentElement.setAttribute('data-theme', (m >= 390 && m < 1110) ? 'day' : 'night');
+  }
+  theme(); setInterval(theme, 60000);
+
+  /* ---------- 倒计时 ---------- */
+  var WD = ['周日','周一','周二','周三','周四','周五','周六'];
+  function epoch(s){ /* 'YYYY-MM-DD HH:MM' 北京时间 */
+    var d = s.split(' ')[0].split('-'), h = s.split(' ')[1].split(':');
+    return Date.UTC(+d[0], +d[1]-1, +d[2], +h[0]-8, +h[1]);
+  }
+  var EVENTS = [
+    ['2026-10-01 08:00','丽丰源可提前入住 · 重庆集结日开始'],
+    ['2026-10-01 16:20','CZ6973 起飞 · 乌鲁木齐 → 重庆'],
+    ['2026-10-01 17:25','EU2224 起飞 · 巴里坤 → 重庆（3人）'],
+    ['2026-10-01 20:05','CZ6973 落地 重庆江北T3'],
+    ['2026-10-01 20:50','EU2224 落地 重庆江北T3'],
+    ['2026-10-01 21:10','MU5433 起飞 · 上海浦东 → 重庆'],
+    ['2026-10-02 00:05','MU5433 落地 重庆江北T3'],
+    ['2026-10-02 07:00','全员集合 · 金茂国际生态新城臻悦'],
+    ['2026-10-02 07:30','出发！重庆 → 龙胜 → 桂林'],
+    ['2026-10-02 20:00','龙脊之夜 灯光秀 · 金坑大寨'],
+    ['2026-10-03 08:00','象鼻山（预约时段 8:00–10:00）'],
+    ['2026-10-03 18:00','金龙巡游 · 金龙桥码头'],
+    ['2026-10-03 20:00','⏰ 全员抢 10.4 遇龙河竹筏票！'],
+    ['2026-10-04 07:40','遇龙河竹筏开漂 · 水厄底码头'],
+    ['2026-10-05 12:00','小七孔入园（16:00 停止入园）'],
+    ['2026-10-06 08:30','织金洞入园'],
+    ['2026-10-06 15:30','遵义会议会址'],
+    ['2026-10-06 21:30','预计抵达重庆 · 散团晚餐'],
+    ['2026-10-07 06:50','GS6589 起飞 · 上海朋友返程'],
+    ['2026-10-07 07:20','GS6587 起飞 · 巴里坤朋友返程'],
+    ['2026-10-07 16:50','CZ6432 起飞 · 乌鲁木齐朋友返程']
+  ].map(function(e){ return {t: epoch(e[0]), label: e[1]}; }).sort(function(a,b){return a.t-b.t;});
+
+  var elN = document.getElementById('evName'), elT = document.getElementById('evTime');
+  var eD = document.getElementById('cdD'), eH = document.getElementById('cdH'),
+      eM = document.getElementById('cdM'), eS = document.getElementById('cdS');
+  function pad(n){ return (n<10?'0':'')+n; }
+  function tick(){
+    var now = Date.now(), next = null;
+    for (var i=0;i<EVENTS.length;i++){ if (EVENTS[i].t > now){ next = EVENTS[i]; break; } }
+    if (!next){
+      elN.textContent = '行程已圆满结束 🎉';
+      elT.textContent = '2026.10.1 – 10.7 · 期待下一次出发';
+      eD.textContent='0'; eH.textContent=eM.textContent=eS.textContent='0';
+      return;
+    }
+    var diff = next.t - now;
+    var d = Math.floor(diff/86400000),
+        h = Math.floor(diff%86400000/3600000),
+        m = Math.floor(diff%3600000/60000),
+        s = Math.floor(diff%60000/1000);
+    elN.textContent = next.label;
+    var dt = new Date(next.t);
+    elT.textContent = (dt.getUTCMonth()+1) + '月' + dt.getUTCDate() + '日 ' + WD[dt.getUTCDay()] + ' ' + pad(dt.getUTCHours()) + ':' + pad(dt.getUTCMinutes()) + ' · 北京时间';
+    eD.textContent = d; eH.textContent = pad(h); eM.textContent = pad(m); eS.textContent = pad(s);
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* ---------- 高德导航链接 ---------- */
+  function navUrl(seg){
+    return 'https://uri.amap.com/navigation?to=' + encodeURIComponent(seg) + '&mode=car&src=tripbook&coordinate=gaode&callnative=1';
+  }
+  function multiUrl(from, to, vias){
+    var u = 'https://uri.amap.com/navigation?from=' + encodeURIComponent(from) + '&to=' + encodeURIComponent(to);
+    if (vias && vias.length) u += '&via=' + vias.map(encodeURIComponent).join('%7C');
+    return u + '&mode=car&src=tripbook&coordinate=gaode&callnative=1';
+  }
+  document.querySelectorAll('.poi').forEach(function(a){
+    var to = a.getAttribute('data-to');
+    if (to) a.setAttribute('href', navUrl(to));
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener');
+  });
+  document.querySelectorAll('.multinav').forEach(function(a){
+    a.setAttribute('href', multiUrl(a.getAttribute('data-from'), a.getAttribute('data-to'), (a.getAttribute('data-via')||'').split('|').filter(Boolean)));
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener');
+  });
+})();
+</script>
+
+
+</body></html>
